@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 📚 Online Learning Platform
 An Online Learning Platform where Instructors can create and manage courses, and Students can explore, purchase, and learn from those courses.
 It includes a Catalog with categories, secure payments via Razorpay, and all media assets are hosted on Cloudinary.
@@ -40,3 +41,6 @@ Frontend	Backend	Cloud & Payment
 React.js with Tailwind CSS	Node.js & Express.js	Cloudinary (media), Razorpay (payment)
 Redux Toolkit (state)	MongoDB Atlas	JWT Auth
 
+=======
+# Education
+>>>>>>> 01e712ac24f204cfe348f533483ef90871515747
