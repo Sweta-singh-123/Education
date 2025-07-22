@@ -261,6 +261,7 @@ export const deleteSubSection = async (data, token) => {
 
 // fetching all courses under a specific instructor
 export const fetchInstructorCourses = async (token) => {
+  console.log("TOKEN BEING SENT >>>", token);
   let result = []
   const toastId = toast.loading("Loading...")
   try {
