@@ -1,6 +1,6 @@
 // const BASE_URL = process.env.REACT_APP_API_BASE_URL||"http://localhost:4000/api/v1"
 
-const BASE_URL = process.env.REACT_APP_API_BASE_URL||"http:localhost:4000/api/v1"
+const BASE_URL = process.env.REACT_APP_API_BASE_URL||"https://education-nx1i.onrender.com"
 // AUTH ENDPOINTS
 export const endpoints = {
   SENDOTP_API: BASE_URL + "/auth/sendotp",
