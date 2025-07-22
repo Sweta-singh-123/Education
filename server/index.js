@@ -185,6 +185,16 @@
 
 
 const express = require("express");
+
+console.log("✅ Running index.js");
+
+try {
+  require.resolve("express");
+  console.log("✅ Express is installed and resolved.");
+} catch (e) {
+  console.log("❌ Express is missing:", e.message);
+}
+
 const app = express();
 
 const userRoutes = require("./routes/User");
