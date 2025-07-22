@@ -178,14 +178,7 @@
 //   console.log(`App is running at ${PORT}`);
 // });
 
-
-
-
-
-
-
 const express = require("express");
-
 
 console.log("✅ Running index.js");
 
