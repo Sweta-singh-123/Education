@@ -40,7 +40,7 @@ export const createCategory = async (categoryData, token) => {
     const response = await apiConnector(
       "POST",
       // CREATE_CATEGORY_API,
-      "https://studynotion-0cem.onrender.com/api/v1/course/createCategory",
+      "https://education-nx1i.onrender.com/api/v1/course/createCategory",
       categoryData,
       {
         Authorization: `Bearer ${token}`,

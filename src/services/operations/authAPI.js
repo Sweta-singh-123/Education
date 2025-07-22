@@ -204,7 +204,7 @@ export function sendOtp(email, navigate) {
     const toastId = toast.loading("Loading...")
     dispatch(setLoading(true))
     try {
-      const response = await apiConnector("POST", "https://studynotion-0cem.onrender.com/api/v1/auth/sendOtp", {
+      const response = await apiConnector("POST", "https://education-nx1i.onrender.com/api/v1/auth/sendOtp", {
         email,
         checkUserPresent: true,
       })
@@ -273,7 +273,7 @@ export function login(email, password, navigate) {
     const toastId = toast.loading("Loading...")
     dispatch(setLoading(true))
     try {
-      const response = await apiConnector("POST", "https://studynotion-0cem.onrender.com/api/v1/auth/login", {
+      const response = await apiConnector("POST", "https://education-nx1i.onrender.com/api/v1/auth/login", {
         email,
         password,
       })
@@ -321,7 +321,7 @@ export function getPasswordResetToken(email , setEmailSent) {
   return async(dispatch) => {
     dispatch(setLoading(true));
     try{
-      const response = await apiConnector("POST", "https://studynotion-0cem.onrender.com/api/v1/auth/getPasswordResetToken", {email,})
+      const response = await apiConnector("POST", "https://education-nx1i.onrender.com/api/v1/auth/getPasswordResetToken", {email,})
 
       console.log("RESET PASSWORD TOKEN RESPONSE....", response);
 
@@ -344,7 +344,7 @@ export function resetPassword(password, confirmPassword, token) {
   return async(dispatch) => {
     dispatch(setLoading(true));
     try{
-      const response = await apiConnector("POST", "https://studynotion-0cem.onrender.com/api/v1/auth/resetPassword", {password, confirmPassword, token});
+      const response = await apiConnector("POST", "https://education-nx1i.onrender.com/api/v1/auth/resetPassword", {password, confirmPassword, token});
 
       console.log("RESET Password RESPONSE ... ", response);
 

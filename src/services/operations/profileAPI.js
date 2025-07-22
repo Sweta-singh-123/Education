@@ -12,7 +12,7 @@ export function getUserDetails(token, navigate) {
     const toastId = toast.loading("Loading...")
     dispatch(setLoading(true))
     try {
-      const response = await apiConnector("GET", "https://studynotion-0cem.onrender.com/api/v1/profile/getUserDetails", null, {
+      const response = await apiConnector("GET", "https://education-nx1i.onrender.com/api/v1/profile/getUserDetails", null, {
         Authorization: `Bearer ${token}`,
       })
       console.log("GET_USER_DETAILS API RESPONSE............", response)
@@ -41,7 +41,7 @@ export async function getUserEnrolledCourses(token) {
     console.log("BEFORE Calling BACKEND API FOR ENROLLED COURSES");
     const response = await apiConnector(
       "GET",
-      "https://studynotion-0cem.onrender.com/api/v1/profile/getEnrolledCourses",
+      "https://education-nx1i.onrender.com/api/v1/profile/getEnrolledCourses",
       null,
       {
         Authorization: `Bearer ${token}`,
@@ -69,7 +69,7 @@ export async function getInstructorData(token) {
   const toastId = toast.loading("Loading...");
   let result = [];
   try{ 
-    const response = await apiConnector("GET", "https://studynotion-0cem.onrender.com/api/v1/profile/instructorDashboard", null, 
+    const response = await apiConnector("GET", "https://education-nx1i.onrender.com/api/v1/profile/instructorDashboard", null, 
     {
       Authorization: `Bearer ${token}`,
     })

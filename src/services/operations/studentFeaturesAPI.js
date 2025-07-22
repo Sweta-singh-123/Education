@@ -166,7 +166,7 @@ export async function buyCourse(token, courses, userDetails, navigate, dispatch)
         }
 
         //initiate the order
-        const orderResponse = await apiConnector("POST", "https://studynotion-0cem.onrender.com/api/v1/payment/capturePayment", 
+        const orderResponse = await apiConnector("POST", "https://education-nx1i.onrender.com/api/v1/payment/capturePayment", 
                                 {courses},
                                 {
                                     Authorization: `Bearer ${token}`,
@@ -214,7 +214,7 @@ export async function buyCourse(token, courses, userDetails, navigate, dispatch)
 
 async function sendPaymentSuccessEmail(response, amount, token) {
     try{
-        await apiConnector("POST", "https://studynotion-0cem.onrender.com/api/v1/payment/sendPaymentSuccessEmail", {
+        await apiConnector("POST", "https://education-nx1i.onrender.com/api/v1/payment/sendPaymentSuccessEmail", {
             orderId: response.razorpay_order_id,
             paymentId: response.razorpay_payment_id,
             amount,
@@ -232,7 +232,7 @@ async function verifyPayment(bodyData, token, navigate, dispatch) {
     const toastId = toast.loading("Verifying Payment....");
     dispatch(setPaymentLoading(true));
     try{
-        const response  = await apiConnector("POST", "https://studynotion-0cem.onrender.com/api/v1/payment/verifyPayment", bodyData, {
+        const response  = await apiConnector("POST", "https://education-nx1i.onrender.com/api/v1/payment/verifyPayment", bodyData, {
             Authorization:`Bearer ${token}`,
         })
 
