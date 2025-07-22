@@ -184,15 +184,36 @@ exports.editCourse = async (req, res) => {
     }
 
     // Update only the fields that are present in the request body
-    for (const key in updates) {
-      if (updates.hasOwnProperty(key)) {
-        if (key === "tag" || key === "instructions") {
-          course[key] = JSON.parse(updates[key])
-        } else {
-          course[key] = updates[key]
-        }
+    // for (const key in updates) {
+    //   if (updates.hasOwnProperty(key)) {
+    //     if (key === "tag" || key === "instructions") {
+    //       course[key] = JSON.parse(updates[key])
+    //     } else {
+    //       course[key] = updates[key]
+    //     }
+    //   }
+    // }
+
+
+// Update only the fields that are present in the request body
+for (const key in updates) {
+  if (Object.prototype.hasOwnProperty.call(updates, key)) {
+    if (key === "tag" || key === "instructions") {
+      try {
+        course[key] = JSON.parse(updates[key]);
+      } catch (err) {
+        return res.status(400).json({
+          success: false,
+          message: `Failed to parse field ${key}`,
+        });
       }
+    } else if (key !== "courseId") {
+      course[key] = updates[key];
     }
+  }
+}
+
+
 
     await course.save()
 
