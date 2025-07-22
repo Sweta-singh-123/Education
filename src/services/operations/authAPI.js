@@ -241,7 +241,7 @@ export function signUp(
     const toastId = toast.loading("Loading...")
     dispatch(setLoading(true))
     try {
-      const response = await apiConnector("POST", "https://studynotion-0cem.onrender.com/api/v1/auth/signUp", {
+      const response = await apiConnector("POST", "https://education-nx1i.onrender.com/api/v1/auth/signUp", {
         accountType,
         firstName,
         lastName,
