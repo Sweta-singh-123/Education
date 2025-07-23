@@ -43,4 +43,5 @@ Redux Toolkit (state)	MongoDB Atlas	JWT Auth
 
 =======
 # Education
+https://education-tau-navy.vercel.app/
 >>>>>>> 01e712ac24f204cfe348f533483ef90871515747
